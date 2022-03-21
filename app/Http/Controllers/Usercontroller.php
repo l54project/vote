@@ -10,6 +10,6 @@ class Usercontroller extends Controller
     public function index()
     {
     	$users = Login::all();
-    	return view('admin/user/index', compact('users'));
+    	return view('admin.user.index', compact('users'));
     }
 }

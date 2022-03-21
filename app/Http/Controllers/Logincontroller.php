@@ -3,13 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\login;
+use App\Models\Login;
 
 class Logincontroller extends Controller
 {
     public function index()
     {
-    	$logins = login::all();
+    	$logins = Login::all();
     	return view('admin/login/index', compact('logins'));
     }
 }

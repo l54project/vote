@@ -18,7 +18,8 @@ use App\Http\Controllers\Vottingcontroller;
 */
 
 Route::get('/', function () {
-    return view('admin/user/index');
+    // return view('admin/user/index');
+    return redirect('votting');
 });
 
 Route::get('panel/login', [Logincontroller::class, 'index']);
@@ -28,4 +29,10 @@ Route::get('panel/user', [Usercontroller::class, 'index']);
 Route::get('panel/poll', [Pollcontroller::class, 'index']);
 Route::get('panel/pilihan', [Pilihancontroller::class, 'index']);
 Route::get('panel/votting', [Vottingcontroller::class, 'index']);
+
+
+
+route::get('votting', [Vottingcontroller::class, 'user_votting']);
+route::post('votting', [Vottingcontroller::class, 'user_votting_proses']);
+route::get('sukses', [Vottingcontroller::class, 'sukses_vote']);
 
